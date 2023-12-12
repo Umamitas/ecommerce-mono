@@ -26,8 +26,7 @@ export const Name = styled.h1`
   font-size: 3rem;
   letter-spacing: 10px;
 `;
-export const OrangeName = styled.h1`
-  display: inline;
+export const OrangeName = styled.span`
   font-size: 3rem;
   letter-spacing: 10px;
   color: #f09d51;

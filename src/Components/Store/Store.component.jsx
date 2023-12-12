@@ -1,16 +1,18 @@
+import {StoreContainer, StoreOrange, StoreTitle} from "./Store.style"
 import Search from "./Search/Search.component";
 import Product from "./Product/Product.component";
 import Categories from "./Categories/Categories.component";
 import "./Store.style"
 
+
 const Store = () => {
   return (
-    <div>
-      <h1>Our store</h1>
+    <StoreContainer>
+      <StoreTitle>Our <StoreOrange>Store</StoreOrange></StoreTitle>
       <Categories />
       <Search />
       <Product />
-    </div>
+    </StoreContainer>
   );
 };
 
