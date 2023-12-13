@@ -1,14 +1,21 @@
-import "./Cart.style";
+import { useContext } from "react";
+import { CartContext } from "../../Context/Cart.context";
+import { CartIconContainer, Icon, ItemCount, TotalPrice } from "./Cart.style";
 import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const Cart = () => {
+  const { isCartOpen, setIsCartOpen } = useContext(CartContext);
+
+  const toggleIsCartOpen = () => setIsCartOpen(!isCartOpen);
+
   return (
-    <>
-      <div>
-        <FontAwesomeIcon icon={faCartShopping}/> 1 items- $5.00
-      </div>
-    </>
+    <CartIconContainer onClick={toggleIsCartOpen}>
+      <Icon>
+        <FontAwesomeIcon icon={faCartShopping} /> <ItemCount>0</ItemCount> items
+        - <TotalPrice></TotalPrice>
+      </Icon>
+    </CartIconContainer>
   );
 };
 export default Cart;

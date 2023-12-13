@@ -7,7 +7,6 @@ export const HomepageContainer = styled.div`
   align-items: center;
   justify-content: center;
   height: 100vh;
-  font-family: "Manrope";
   background: linear-gradient(
       rgba(255, 255, 255, 0.1),
       rgba(255, 255, 255, 0.4)
@@ -15,12 +14,12 @@ export const HomepageContainer = styled.div`
     url(${BackgroundImage}) center/cover;
 `;
 
-export const Heading = styled.h1`
+export const Heading = styled.h2`
   font-size: 2.5rem;
   margin-bottom: 20px;
 `;
 
-export const Name = styled.h1`
+export const Name = styled.p`
   display: inline;
   padding-left: 0.5rem;
   font-size: 3rem;

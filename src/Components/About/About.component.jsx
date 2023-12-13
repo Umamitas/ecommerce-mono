@@ -10,7 +10,7 @@ import {
   FramedContainer,
   Image
 } from "./About.style";
-import AboutLogo from "../../Assets/img/product-4.jpeg";
+import AboutLogo from "../../Assets/img/aboutImage.jpeg";
 
 const About = () => {
   return (

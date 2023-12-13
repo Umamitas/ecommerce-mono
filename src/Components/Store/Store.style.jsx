@@ -19,3 +19,10 @@ export const StoreOrange = styled.span`
   letter-spacing: 6px;
   padding-left: 0.5rem;
 `;
+export const ProductsContainer = styled.div`
+  margin: 2rem 4rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 30px;
+  row-gap: 30px;
+`;
