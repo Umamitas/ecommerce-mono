@@ -8,9 +8,10 @@ import {
   LeftText,
   ExploreButton,
   FramedContainer,
-  Image
+  Image,
 } from "./About.style";
 import AboutLogo from "../../Assets/img/aboutImage.jpeg";
+import { Link } from "react-scroll";
 
 const About = () => {
   return (
@@ -26,11 +27,13 @@ const About = () => {
             voluptate nisi ullam eveniet perspiciatis incidunt adipisci
             repellendus voluptatum, iste saepe enim?
           </LeftText>
-          <ExploreButton>EXPLORE</ExploreButton>
+          <Link to="store" smooth={true} duration={500}>
+            <ExploreButton>EXPLORE</ExploreButton>
+          </Link>
         </LeftContainer>
         <RightContainer>
           <FramedContainer>
-            <Image src={AboutLogo}/>
+            <Image src={AboutLogo} />
           </FramedContainer>
         </RightContainer>
       </AboutInnerContainer>

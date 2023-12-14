@@ -4,7 +4,7 @@ export const AboutContainer = styled.div`
   display: flex;
   flex-direction: column;
   padding-top: 3rem;
-  padding-bottom: 3rem;
+  padding-bottom: 2rem;
   font-family: "Manrope";
 `;
 

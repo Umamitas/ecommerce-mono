@@ -1,10 +1,12 @@
-import "./Search.style"
+import React from "react";
+import { SearchContainer, SearchIcon, SearchInput } from "./Search.style";
 
 const Search = () => {
   return (
-    <div>
-      <h3>Search</h3>
-    </div>
+    <SearchContainer>
+      <SearchIcon>logo</SearchIcon>
+      <SearchInput type="text" placeholder="Search products..." />
+    </SearchContainer>
   );
 };
 

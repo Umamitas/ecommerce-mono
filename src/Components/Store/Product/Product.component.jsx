@@ -11,11 +11,20 @@ import {
   ProductPrice,
 } from "./Product.style";
 
-const Product = ({ title, price, imageUrl, productObj }) => {
+const Product = ({ product }) => {
+  const {
+    title = product.fields.title,
+    price = product.fields.price,
+    imageUrl = product.fields.image.path,
+  } = product;
+
   const { addItemToCart } = useContext(CartContext);
 
-  const addProductToCart = () => addItemToCart(productObj);
-  //to make it more readable i'll avoid using a long function insieme "onClick"
+  const addProductToCart = () => {
+    addItemToCart(product);
+  };
+  //to make it more readable i'll avoid using a long function inside "onClick"
+
   return (
     <ProductCard>
       <CardImg src={imageUrl} alt={`${title}`} />
@@ -26,7 +35,7 @@ const Product = ({ title, price, imageUrl, productObj }) => {
 
       <ProductFooter>
         <ProductName>
-          {title}
+          {title.charAt(0).toUpperCase() + title.slice(1)}
           <ProductPrice>${price}</ProductPrice>
         </ProductName>
       </ProductFooter>

@@ -1,7 +1,7 @@
 import { styled } from "styled-components";
 
 export const StoreContainer = styled.div`
-  padding-top: 3rem;
+  padding-top: 2rem;
   padding-bottom: 3rem;
   background-color: #e9e3e3;
   display: flex;

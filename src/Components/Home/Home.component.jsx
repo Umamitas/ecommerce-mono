@@ -1,3 +1,5 @@
+import React from "react";
+import { Link } from "react-scroll";
 import {
   HomepageContainer,
   Heading,
@@ -6,17 +8,21 @@ import {
   OrangeName,
 } from "./Home.style";
 
+
 const Home = () => {
   return (
-    <HomepageContainer>
+    <HomepageContainer id="home">
       <Heading>
-        Welcome to {" "}
+        Welcome to{" "}
         <Name>
           Comfy<OrangeName>House</OrangeName>
         </Name>
       </Heading>
-      <ExploreButton>EXPLORE</ExploreButton>
+      <Link to="store" smooth={true} duration={500}>
+        <ExploreButton>EXPLORE</ExploreButton>
+      </Link>
     </HomepageContainer>
   );
 };
+
 export default Home;

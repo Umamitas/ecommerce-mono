@@ -11,25 +11,23 @@ import Product from "./Product/Product.component";
 import Categories from "./Categories/Categories.component";
 
 const Store = () => {
-  const { products } = useContext(ProductsContext);
+  const { products, filteredProducts } = useContext(ProductsContext);
 
   return (
-    <StoreContainer>
+    <StoreContainer id="store">
       <StoreTitle>
         Our <StoreOrange>Store</StoreOrange>
       </StoreTitle>
       <Categories />
       <Search />
       <ProductsContainer>
-        {products.map((product) => (
-          <Product
-            productObj={product}
-            key={product.sys.id}
-            title={product.fields.title}
-            price={product.fields.price}
-            imageUrl={product.fields.image.path}
-          />
-        ))}
+        {filteredProducts
+          ? filteredProducts.map((product) => (
+              <Product key={product.sys.id} product={product} />
+            ))
+          : products.map((product) => (
+              <Product key={product.sys.id} product={product} />
+            ))}
       </ProductsContainer>
     </StoreContainer>
   );

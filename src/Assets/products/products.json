@@ -1,5 +1,5 @@
 [
-  {
+  { "category" : "bed",
     "sys": { "id": "1" },
     "fields": {
       "title": "queen panel bed",
@@ -10,6 +10,7 @@
     }
   },
   {
+    "category" : "bed",
     "sys": { "id": "2" },
     "fields": {
       "title": "king panel bed",
@@ -20,6 +21,7 @@
     }
   },
   {
+    "category" : "bed",
     "sys": { "id": "3" },
     "fields": {
       "title": "single panel bed",
@@ -30,6 +32,7 @@
     }
   },
   {
+    "category" : "bed",
     "sys": { "id": "4" },
     "fields": {
       "title": "twin panel bed",
@@ -40,6 +43,7 @@
     }
   },
   {
+    "category" : "fridge",
     "sys": { "id": "5" },
     "fields": {
       "title": "fridge",
@@ -50,6 +54,7 @@
     }
   },
   {
+    "category" : "dresser",
     "sys": { "id": "6" },
     "fields": {
       "title": "dresser",
@@ -60,6 +65,7 @@
     }
   },
   {
+    "category" : "couch",
     "sys": { "id": "7" },
     "fields": {
       "title": "couch",
@@ -70,6 +76,7 @@
     }
   },
   {
+    "category" : "table",
     "sys": { "id": "8" },
     "fields": {
       "title": "table",

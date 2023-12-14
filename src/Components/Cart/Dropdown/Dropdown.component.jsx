@@ -1,36 +1,43 @@
 import { useContext } from "react";
 import { CartContext } from "../../../Context/Cart.context";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 import {
   DropdownContainer,
   CartItemsWindow,
-  BinIcon,
   CheckOut,
   ClearCart,
   DropDownFooter,
+  EmptyMessage,
+  CartTotal,
+  TotalPrice,
 } from "./Dropdown.style";
-import { faTrash } from "@fortawesome/free-solid-svg-icons";
+
 import CartItem from "../CartItems/CartItems.component";
 
 const Dropdown = () => {
-  const { cartItems } = useContext(CartContext);
+  const { cartItems, clearAllCart } = useContext(CartContext);
+
+  const totalPrice = cartItems.reduce(
+    (total, item) => total + item.fields.price * item.quantity,
+    0
+  );
   return (
     <DropdownContainer>
       <CartItemsWindow>
-        {cartItems.map((item) => (
-          <CartItem
-            key={item.sys.id}
-            name={item.fields.title}
-            price={item.fields.price}
-            imageUrl={item.fields.image.path}
-          />
-        ))}
-        <BinIcon>
-          <FontAwesomeIcon icon={faTrash} />
-        </BinIcon>
+        {cartItems.length ? (
+          cartItems.map((item) => (
+            <CartItem key={item.sys.id} CartItem={item} />
+          ))
+        ) : (
+          <EmptyMessage>Your Cart is empty</EmptyMessage>
+        )}
       </CartItemsWindow>
       <DropDownFooter>
-        <ClearCart>CLEAR CART </ClearCart>
+        <CartTotal>Total: </CartTotal>
+        <TotalPrice> $ {totalPrice.toFixed(2)}</TotalPrice>
+      </DropDownFooter>
+      <DropDownFooter>
+        <ClearCart onClick={clearAllCart}>CLEAR CART </ClearCart>
         <CheckOut>CHECKOUT</CheckOut>
       </DropDownFooter>
     </DropdownContainer>

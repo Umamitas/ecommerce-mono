@@ -20,7 +20,7 @@ export const CardImg = styled.img`
   }
 `;
 
-export const CartIconImage = styled.span`
+export const CartIconImage = styled.button`
   position: absolute;
   right: 0;
   width: 40px;

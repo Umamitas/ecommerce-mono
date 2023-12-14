@@ -6,6 +6,7 @@ export const CategoriesContainer = styled.div`
   display: inline;
   flex-direction: row;
   text-align: center;
+
 `;
 
 export const ItemDirectory = styled.button`
@@ -16,7 +17,8 @@ export const ItemDirectory = styled.button`
   cursor: pointer;
   font-size: 1rem;
   font-weight: bold;
-  margin-left: 40px;
+  margin-left: 3rem;
+  margin-bottom: 3rem;
 
   &:hover {
     background-color: #f09d51;

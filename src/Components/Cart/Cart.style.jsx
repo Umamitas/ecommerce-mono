@@ -6,12 +6,12 @@ export const CartIconContainer = styled.div`
   position: relative;
   display: flex;
   align-items: center;
-  cursor: pointer;
 `;
 export const Icon = styled.button`
   width: 150px;
   height: 40px;
   position: absolute;
+  cursor: pointer;
 `;
 export const ItemCount = styled.span`
   padding-left: 0.2rem;
