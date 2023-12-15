@@ -8,12 +8,11 @@ import {
   OrangeName,
 } from "./Home.style";
 
-
 const Home = () => {
   return (
     <HomepageContainer id="home">
       <Heading>
-        Welcome to{" "}
+        Welcome to
         <Name>
           Comfy<OrangeName>House</OrangeName>
         </Name>

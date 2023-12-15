@@ -31,13 +31,10 @@ export const ItemPrice = styled.p`
   font-size: 12px;
   font-weight: normal;
   margin-top: 2px;
-  
 `;
 export const ItemCount = styled.span`
   font-size: 12px;
   font-weight: normal;
-  
-  
 `;
 
 export const BinIcon = styled.span`

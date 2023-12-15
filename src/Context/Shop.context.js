@@ -11,7 +11,7 @@ export const ProductsProvider = ({ children }) => {
   const [filteredProducts, setFilteredProducts] = useState(products);
   const [originalProducts, setOriginalProducts] = useState(products);
 
-  /* helper function to filter store in seach */
+  /* helper function to filter store in search */
   const filterProductsBySearch = (event) => {
     const searchWord = event.target.value;
     if (searchWord === "") {
@@ -24,7 +24,7 @@ export const ProductsProvider = ({ children }) => {
     }
   };
 
-  /* helper function to filter store in seach */
+  /* helper function to filter store in category */
   const filterProductsByCategory = (category) => {
     setFilteredProducts((prevProducts) =>
       category

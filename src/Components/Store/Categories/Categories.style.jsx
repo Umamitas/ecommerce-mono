@@ -1,12 +1,14 @@
 import styled from "styled-components";
 
 export const CategoriesContainer = styled.div`
-  width: 100%;
-  height: 80px;
-  display: inline;
-  flex-direction: row;
-  text-align: center;
-
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  column-gap: 1rem;
+  row-gap: 1rem;
+  @media screen and (max-width: 600px) {
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 0rem;
+  }
 `;
 
 export const ItemDirectory = styled.button`
@@ -23,5 +25,10 @@ export const ItemDirectory = styled.button`
   &:hover {
     background-color: #f09d51;
     color: #fff;
+  }
+  @media screen and (max-width: 600px) {
+    padding: 0.5rem 1rem;
+    margin-bottom: 1rem;
+    margin-left: 0px;
   }
 `;

@@ -3,6 +3,11 @@ import styled from "styled-components";
 export const SearchContainer = styled.div`
   align-items: center;
   display: flex;
+
+  @media screen and (max-width: 600px) {
+    padding: 1rem 2rem;
+    width: 80%;
+  }
 `;
 
 export const SearchInput = styled.input`
@@ -12,7 +17,6 @@ export const SearchInput = styled.input`
   width: 20rem;
   justify-content: center;
   padding: 1rem 1rem;
-  
 `;
 
 export const SearchIcon = styled.span`

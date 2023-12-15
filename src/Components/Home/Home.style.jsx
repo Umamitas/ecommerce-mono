@@ -12,11 +12,20 @@ export const HomepageContainer = styled.div`
       rgba(255, 255, 255, 0.4)
     ),
     url(${BackgroundImage}) center/cover;
+
+  @media screen and (max-width: 600px) {
+    width: 100%;
+    height: 60vh;
+  }
 `;
 
 export const Heading = styled.h2`
   font-size: 2.5rem;
   margin-bottom: 20px;
+
+  @media screen and (max-width: 600px) {
+    text-align: center;
+  }
 `;
 
 export const Name = styled.p`
@@ -24,6 +33,10 @@ export const Name = styled.p`
   padding-left: 0.5rem;
   font-size: 3rem;
   letter-spacing: 10px;
+
+  @media screen and (max-width: 600px) {
+    display: block;
+  }
 `;
 export const OrangeName = styled.span`
   font-size: 3rem;
@@ -43,5 +56,9 @@ export const ExploreButton = styled.button`
   &:hover {
     background-color: #f09d51;
     color: #fff;
+  }
+
+  @media screen and (max-width: 600px) {
+    margin-top: 5rem;
   }
 `;

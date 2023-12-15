@@ -25,4 +25,10 @@ export const ProductsContainer = styled.div`
   grid-template-columns: repeat(3, 1fr);
   column-gap: 30px;
   row-gap: 30px;
+
+  @media screen and (max-width: 600px) {
+    margin: 2rem 3rem;
+    grid-template-columns: repeat(1, 1fr);
+    row-gap: 2rem;
+  }
 `;

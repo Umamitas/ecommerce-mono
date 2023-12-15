@@ -1,8 +1,8 @@
 import styled from "styled-components";
 
 export const DropdownContainer = styled.div`
-  position:absolute;
-  top:0;
+  position: absolute;
+  top: 0;
   right: 0;
   width: 240px;
   height: auto;
@@ -12,17 +12,17 @@ export const DropdownContainer = styled.div`
   top: 80px;
   z-index: 2;
 `;
-/*in case of no element inside */
+
 export const EmptyMessage = styled.p`
   font-size: 18px;
   margin: 50px auto;
 `;
 
 export const CartItemsWindow = styled.div`
-  height: auto;
+  height: 10rem;
   display: flex;
   flex-direction: column;
-  overflow: hidden;
+  overflow: scroll;
 `;
 
 /* footer section */
