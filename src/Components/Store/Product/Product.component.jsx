@@ -21,6 +21,7 @@ const Product = ({ product }) => {
   const { addItemToCart } = useContext(CartContext);
 
   const addProductToCart = () => {
+    alert('Item added to the cart!')
     addItemToCart(product);
   };
   //to make it more readable i'll avoid using a long function inside "onClick"
@@ -30,6 +31,7 @@ const Product = ({ product }) => {
       <CardImg src={imageUrl} alt={`${title}`} />
 
       <CartIconImage onClick={addProductToCart}>
+        
         <FontAwesomeIcon icon={faCartShopping} />
       </CartIconImage>
 

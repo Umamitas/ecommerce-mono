@@ -6,6 +6,12 @@ export const AboutContainer = styled.div`
   padding-top: 3rem;
   padding-bottom: 2rem;
   font-family: "Manrope";
+  @media screen and (max-width: 1200px) {
+    position: initial;
+    width: auto;
+    padding: 10px;
+ 
+  }
 `;
 
 /* LEFT SIDE OF ABOUT SECTION */
@@ -13,6 +19,12 @@ export const LeftContainer = styled.div`
   flex: 50%;
   align-items: center;
   padding-left: 100px;
+  @media screen and (max-width: 1200px) {
+    position: relative;
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+  }
 `;
 
 export const LeftTitle = styled.h2`
@@ -30,6 +42,13 @@ export const LeftText = styled.p`
   color: grey;
   font-size: 1rem;
   font-weight: bolder;
+  @media screen and (max-width: 1200px) {
+    position: initial;
+    width: 200px;
+    height: auto;
+    padding: 10px;
+    box-sizing: border-box;
+  }
 `;
 export const ExploreButton = styled.button`
   margin-top: 20px;
@@ -45,6 +64,13 @@ export const ExploreButton = styled.button`
     background-color: #f09d51;
     color: #fff;
   }
+  @media screen and (max-width: 1200px) {
+    position: initial;
+    width: 60%;
+    padding: 10px;
+    box-sizing: border-box;
+    display: block;
+  }
 `;
 /* RIGHT SIDE OF ABOUT SECTION */
 
@@ -54,6 +80,12 @@ export const RightContainer = styled.div`
   align-items: center;
   justify-content: center;
   padding-right: 100px;
+  @media screen and (max-width: 1200px) {
+    position: relative;
+    width: 100%;
+    height: auto;
+    margin: auto;
+  }
 `;
 
 /* --- Animazione Bordo colorato --- */

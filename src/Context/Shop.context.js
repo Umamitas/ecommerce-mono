@@ -9,7 +9,22 @@ export const ProductsContext = createContext({
 export const ProductsProvider = ({ children }) => {
   const [products, setProducts] = useState(PRODUCTS);
   const [filteredProducts, setFilteredProducts] = useState(products);
-  
+  const [originalProducts, setOriginalProducts] = useState(products);
+
+  /* helper function to filter store in seach */
+  const filterProductsBySearch = (event) => {
+    const searchWord = event.target.value;
+    if (searchWord === "") {
+      setProducts(originalProducts);
+    } else {
+      const newFilter = products.filter((product) =>
+        product.fields.title.includes(searchWord)
+      );
+      setProducts(newFilter);
+    }
+  };
+
+  /* helper function to filter store in seach */
   const filterProductsByCategory = (category) => {
     setFilteredProducts((prevProducts) =>
       category
@@ -17,13 +32,13 @@ export const ProductsProvider = ({ children }) => {
         : products
     );
   };
-  
 
   const value = {
     products,
     filteredProducts,
     setFilteredProducts,
     filterProductsByCategory,
+    filterProductsBySearch,
   };
 
   return (
@@ -31,8 +46,4 @@ export const ProductsProvider = ({ children }) => {
       {children}
     </ProductsContext.Provider>
   );
-};
-
-export const useProductsContext = () => {
-  return useContext(ProductsContext);
 };

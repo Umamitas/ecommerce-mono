@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import React, { useContext } from "react";
 import { ProductsContext } from "../../Context/Shop.context";
 import {
   ProductsContainer,
@@ -11,7 +11,7 @@ import Product from "./Product/Product.component";
 import Categories from "./Categories/Categories.component";
 
 const Store = () => {
-  const { products, filteredProducts } = useContext(ProductsContext);
+  const { filteredProducts } = useContext(ProductsContext);
 
   return (
     <StoreContainer id="store">
@@ -21,13 +21,13 @@ const Store = () => {
       <Categories />
       <Search />
       <ProductsContainer>
-        {filteredProducts
-          ? filteredProducts.map((product) => (
-              <Product key={product.sys.id} product={product} />
-            ))
-          : products.map((product) => (
-              <Product key={product.sys.id} product={product} />
-            ))}
+        {filteredProducts.length > 0 ? (
+          filteredProducts.map((product) => (
+            <Product key={product.sys.id} product={product} />
+          ))
+        ) : (
+          <p>No matching products found.</p>
+        )}
       </ProductsContainer>
     </StoreContainer>
   );
